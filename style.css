@@ -1,0 +1,74 @@
+body {
+    background-image: url(./img/img1.jpg);
+    background-size: cover  ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+}
+h1 {
+    text-align: center;
+}
+
+/* p { 
+    text-align: center;
+    background-color: rgba(79, 76, 76, 0.171);
+    /*arriba, derecha, abajo, izquierda
+    padding: 10% 1% 10% 3%;
+    margin: 5% 10%;
+    position: relative;
+    cursor: crosshair;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4a4a3e;
+}
+*/
+.temperatura {
+    text-align: center;
+    background-color: rgba(79, 76, 76, 0.171);
+    /*arriba, derecha, abajo, izquierda*/
+    padding: 10% 1% 10% 3%;
+    margin: 5% 10%;
+    position: relative;
+    cursor: crosshair;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4a4a3e;
+}
+
+.temperatura::before {
+  content: "Temperatura";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.calidad-aire {
+    text-align: center;
+    background-color: rgba(79, 76, 76, 0.171);
+    /*arriba, derecha, abajo, izquierda*/
+    padding: 10% 1% 10% 3%;
+    margin: 5% 10%;
+    position: relative;
+    cursor: crosshair;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4a4a3e;
+}
+.ciudad {
+    text-align: center;
+    background-color: rgba(79, 76, 76, 0.171);
+    /*arriba, derecha, abajo, izquierda*/
+    padding: 10% 1% 10% 3%;
+    margin: 5% 10%;
+    position: relative;
+    cursor: crosshair;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4a4a3e;
+}
+
+.nubes {
+    text-align: center;
+    background-color: rgba(79, 76, 76, 0.171);
+    /*arriba, derecha, abajo, izquierda*/
+    padding: 10% 1% 10% 3%;
+    margin: 5% 10%;
+    position: relative;
+    cursor: crosshair;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #4d4a4a3e;
+}
