@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Weather App</title>
 </head>
 <body>
@@ -54,10 +55,10 @@
 
       // Crea un HTML con la información
       const htmlContent = `
-        <p>Temperatura: ${weatherInfo.app_temp} °C</p>
-        <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
-        <p>Ciudad: ${weatherInfo.city_name}</p>
-        <p>Nubes: ${weatherInfo.clouds}</p>
+        <p class="temperatura">Temperatura: ${weatherInfo.app_temp} °C</p>
+        <p class="calidad-aire">Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
+        <p class="ciudad">Ciudad: ${weatherInfo.city_name}</p>
+        <p class="nubes">Nubes: ${weatherInfo.clouds}</p>
         <!-- ... (otros campos) -->
       `;
 
