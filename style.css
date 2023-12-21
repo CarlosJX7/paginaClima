@@ -69,3 +69,40 @@ footer {
     margin-top: 20px; /* Agrega espacio entre box2 y el footer */
     margin-bottom: 20px; /* Agrega espacio en la parte inferior de la página */
 }
+/*imagen*/
+.contenedor {
+    text-align: center;
+}
+.imagen {
+    display: block;margin: 0 auto;
+    border-radius: 8px;
+}
+
+/*Boton */
+.botton {
+    text-align: center;
+    margin-top: 20px; /* Agrega espacio entre box2 y el footer */
+    margin-bottom: 20px; /* Agrega espacio en la parte inferior de la página */
+}
+#change-temperature-button {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background-color: rgba(87, 86, 86, 0.186);
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+   }
+   
+   #change-temperature-button:hover {
+    box-shadow: 10px 10px 10px #ffffff;
+   }
+   
+   #change-temperature-button:active {
+    transform: scale(0.97);
+    box-shadow: 10px 10px 10px #ffffff;
+   }

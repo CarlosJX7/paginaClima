@@ -77,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const htmlContent = `
             <h1>${weatherInfo.app_temp} °C</h1>
-            <img src="${imagenPath}" alt="mood">
+            <div class="contenedor">
+                <img src="${imagenPath}" alt="mood" width="200" height="150" class="imagen">
+            </div>
             <div class="container">
                 <div class="box">  
                     <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
