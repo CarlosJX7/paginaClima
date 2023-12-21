@@ -35,45 +35,69 @@ document.addEventListener('DOMContentLoaded', function () {
     // Accede a los datos específicos
     const weatherInfo = weatherData.data[0];
     const weatherInfoContainer = document.getElementById('weather-info');
+    const changeTemperatureButton = document.getElementById('change-temperature-button');
 
-    // Utiliza un bloque switch para manejar diferentes casos de temperatura
-    let  imagenPath;
+    // Agrega un event listener al botón para cambiar la temperatura
+    changeTemperatureButton.addEventListener('click', function () {
+        // Pide al usuario que ingrese la nueva temperatura
+        const newTemperatureString = prompt('Ingrese la nueva temperatura:', '');
 
-    switch (true) {
-      case weatherInfo.app_temp >= 5 && weatherInfo.app_temp <= 10:
-          imagenPath = 'img/friazo.jpeg';
-          break;
-      case weatherInfo.app_temp > 10:
-          imagenPath = 'img/chill.jpeg';
-          break;
-      case weatherInfo.app_temp < 10:
-          imagenPath = 'img/el_demon.jpeg';
-          break;
-      default:
-          // Si la temperatura no coincide con ninguno de los casos, puedes establecer una imagen predeterminada o dejarla sin definir
-          //imagenPath = 'imagen-default.jpg';
-  }
+        // Convierte la entrada del usuario a un número
+        const newTemperature = parseFloat(newTemperatureString);
 
-    // Crea un HTML con la información
-    const htmlContent = `
-    <h1>${weatherInfo.app_temp} °C</h1>
-    <img src="${imagenPath}" alt="mood">
-      <div class="container">
-        <div class="box">  
-            <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
-        </div>
-        <div class="box2">
-          <p>Ciudad: ${weatherInfo.city_name}</p>
-        </div>
-        <div class="box">
-          <p>Nubes: ${weatherInfo.clouds}</p>
-        </div>
-        <div class="box2">  
-          <p> otros campos </p>
-        </div>
-      </div>
-    `;
+        // Verifica si la entrada es un número válido
+        if (!isNaN(newTemperature)) {
+            // Actualiza el valor de la temperatura y vuelve a renderizar la información
+            weatherInfo.app_temp = newTemperature;
+            renderWeatherInfo();
+        } else {
+            alert('Por favor, ingrese un número válido para la temperatura.');
+        }
+    });
 
-    // Agrega el contenido al contenedor
-    weatherInfoContainer.innerHTML = htmlContent;
-  });
+    // Función para renderizar la información meteorológica
+    function renderWeatherInfo() {
+        // Utiliza un bloque switch para manejar diferentes casos de temperatura
+        let imagenPath;
+
+        switch (true) {
+            case weatherInfo.app_temp >= 5 && weatherInfo.app_temp <= 10:
+                imagenPath = 'img/friazo.jpeg';
+                break;
+            case weatherInfo.app_temp > 10:
+                imagenPath = 'img/chill.jpeg';
+                break;
+            case weatherInfo.app_temp < 10:
+                imagenPath = 'img/el_demon.jpeg';
+                break;
+            default:
+                // Si la temperatura no coincide con ninguno de los casos, puedes establecer una imagen predeterminada o dejarla sin definir
+                //imagenPath = 'imagen-default.jpg';
+        }
+
+        const htmlContent = `
+            <h1>${weatherInfo.app_temp} °C</h1>
+            <img src="${imagenPath}" alt="mood">
+            <div class="container">
+                <div class="box">  
+                    <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
+                </div>
+                <div class="box2">
+                    <p>Ciudad: ${weatherInfo.city_name}</p>
+                </div>
+                <div class="box">
+                    <p>Nubes: ${weatherInfo.clouds}</p>
+                </div>
+                <div class="box2">  
+                    <p> Otros campos </p>
+                </div>
+            </div>
+        `;
+
+        // Agrega el contenido al contenedor
+        weatherInfoContainer.innerHTML = htmlContent;
+    }
+
+    // Llama a la función para renderizar la información al cargar la página
+    renderWeatherInfo();
+});
