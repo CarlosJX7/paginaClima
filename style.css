@@ -1,62 +1,71 @@
+
 body {
-    background-image: url(./img/img1.jpg);
-    background-size: cover  ;
+    background: rgb(44,153,246);
+    background: linear-gradient(0deg, rgba(44,153,246,1) 53%, rgba(76,45,253,1) 98%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-repeat: no-repeat;
     color: antiquewhite;
+ 
 }
 h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 50px;
+    padding-top: 10%;
 }
-.temperatura {
-    text-align: center;
-    font-size: 45px;
-    position: center;
-    background-color: rgba(79, 76, 76, 0.171);
-    /*arriba, derecha, abajo, izquierda*/
-    padding: 10% 1% 10% 3%;
-    margin: 5% 10%;
-    position: relative;
-    cursor: crosshair;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px #4d4a4a3e;
-}
+.container {
+    display: flex; /* Establece el contenedor como un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos secundarios se envuelvan a la siguiente línea si no hay suficiente espacio */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos secundarios, proporcionando un espacio uniforme */
+    align-items: flex-start; /* Alinea los elementos secundarios al inicio del eje transversal (superior) */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+    padding-top: 20%; /* Agrega un espacio en la parte superior equivalente al 30% de la altura del contenedor */
+    cursor: crosshair; /* Establece el cursor al estilo de la cruz */
 
-
-.calidad-aire {
-    text-align: center;
-    font-size: 45px;
-    background-color: rgba(79, 76, 76, 0.171);
-    /*arriba, derecha, abajo, izquierda*/
-    padding: 10% 1% 10% 3%;
-    margin: 5% 10%;
-    position: relative;
-    cursor: crosshair;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px #4d4a4a3e;
 }
-.ciudad {
-    text-align: center;
-    font-size: 45px;
-    background-color: rgba(79, 76, 76, 0.171);
-    /*arriba, derecha, abajo, izquierda*/
-    padding: 10% 1% 10% 3%;
-    margin: 5% 10%;
-    position: relative;
-    cursor: crosshair;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px #4d4a4a3e;
+.box {
+    min-width: 200px; /* Establece un ancho mínimo para evitar que sean demasiado pequeños */
+    width: 49%; /* Establece el ancho de cada cuadro al 45% del ancho del contenedor principal */
+    height: 250px; /* Modifica la altura del cuadro a tu preferencia, por ejemplo, 150px */ 
+    margin: 5px 2px; /* Modifica el valor del margen horizontal según tu preferencia, por ejemplo, 5px en la parte superior e inferior y 10px en la derecha e izquierda */
+    border-radius: 8px; /* Establece un radio de borde de 8 píxeles para suavizar las esquinas */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura totales del cuadro */
+    text-align: left; /* Alinea el texto a la izquierda dentro de cada cuadro */
+    padding: 20px; /* Agrega un relleno interno de 20 píxeles a cada cuadro */
+    background-color: rgba(87, 86, 86, 0.186);
+    box-shadow: 10px 10px 10px #00000028;
+    position: relative; /* Asegura que la posición de la imagen sea relativa al contenedor */
 }
-
-.nubes {
-    text-align: center;
-    font-size: 45px;
-    background-color: rgba(79, 76, 76, 0.171);
-    /*arriba, derecha, abajo, izquierda*/
-    padding: 10% 1% 10% 3%;
-    margin: 5% 10%;
-    position: relative;
-    cursor: crosshair;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px #4d4a4a3e;
+.box2 {
+    min-width: 200px; /* Establece un ancho mínimo para evitar que sean demasiado pequeños */
+    width: 49%;
+    height: 250px;
+    margin: 5px 2px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 20px;  
+    background-color: rgba(87, 86, 86, 0.186);
+    box-shadow: 10px 10px 10px #00000028;
+}
+.box img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupará todo el alto del contenedor */
+    object-fit: cover; /* Mantiene la proporción original de la imagen y cubre completamente el contenedor */
+    display: block;
+    margin: 0 auto;
+}
+/* Estilos para el footer */
+footer {
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgba(87, 86, 86, 0.186);
+    box-shadow: 10px 10px 10px #00000028; /* Cambia el color de fondo según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 40px; /* Ajusta el espacio interno del footer según tus preferencias */
+    position: relative; /* Establece la posición relativa */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
+    clear: both; /* Asegura que el footer se coloque después de los elementos flotantes */
+    margin-top: 20px; /* Agrega espacio entre box2 y el footer */
+    margin-bottom: 20px; /* Agrega espacio en la parte inferior de la página */
 }

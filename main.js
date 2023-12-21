@@ -38,11 +38,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Crea un HTML con la información
     const htmlContent = `
-      <p class="temperatura">Temperatura: ${weatherInfo.app_temp} °C</p>
-      <p class="calidad-aire">Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
-      <p class="ciudad">Ciudad: ${weatherInfo.city_name}</p>
-      <p class="nubes">Nubes: ${weatherInfo.clouds}</p>
-      <!-- ... (otros campos) -->
+    <h1>${weatherInfo.app_temp} °C</h1>
+
+      <div class="container">
+        <div class="box">  
+            <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
+        </div>
+        <div class="box2">
+          <p>Ciudad: ${weatherInfo.city_name}</p>
+        </div>
+        <div class="box">
+          <p>Nubes: ${weatherInfo.clouds}</p>
+        </div>
+        <div class="box2">  
+          <p> otros campos </p>
+        </div>
+      </div>
     `;
 
     // Agrega el contenido al contenedor
