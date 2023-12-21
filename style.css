@@ -107,19 +107,32 @@ footer {
     transform: scale(0.97);
     box-shadow: 10px 10px 10px #ffffff;
    }
+/*Boton2*/
+#obtener-datos-button {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 19px;
+    background-color: rgba(87, 86, 86, 0.186);
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+}
 
-   /*pal movil*/
-   @media (max-width: 768px) {
-    /* Agrega tus estilos específicos para dispositivos móviles aquí */
-    h1 {
-      font-size: 30px; /* Ejemplo de ajuste de tamaño de fuente para dispositivos móviles */
-      padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
-    }
-    .container {
-      padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
-    }
-    .box, .box2 {
-      width: 100%; /* Ejemplo de ajuste de ancho para dispositivos móviles */
-    }
-  }
+/*pal movil*/
+@media (max-width: 768px) {
+/* Agrega tus estilos específicos para dispositivos móviles aquí */
+h1 {
+    font-size: 30px; /* Ejemplo de ajuste de tamaño de fuente para dispositivos móviles */
+    padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
+}
+.container {
+    padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
+}
+.box, .box2 {
+  width: 100%; /* Ejemplo de ajuste de ancho para dispositivos móviles */
+ }
+}
   
