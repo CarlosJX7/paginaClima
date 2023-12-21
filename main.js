@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+document.addEventListener('DOMContentLoaded', async function () {
     // JSON de ejemplo
     const weatherData = {
       "count": 1,
@@ -56,6 +57,42 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    let mensaje;
+    async function realizarConsultaChiste() {
+      try {
+          const response = await fetch('https://v2.jokeapi.dev/joke/Any?lang=es');
+          const data = await response.json();
+  
+          if (data) {
+              return data.joke;
+          } else {
+              throw new Error('Datos de la API no válidos.');
+          }
+      } catch (error) {
+          console.error('Error al obtener datos de la API:', error);
+          throw error; // Re-lanzar el error para que sea manejado por el código que llama a esta función
+      }
+  }
+
+
+    // Uso de la función asíncrona
+async function obtenerChiste() {
+  try {
+      mensaje = await realizarConsultaChiste();
+      renderWeatherInfo();
+  } catch (error) {
+      // Manejar el error si es necesario
+      console.error('Error al obtener chiste:', error);
+  }
+}
+  await obtenerChiste();
+
+  
+  
+  // Llamada a la función
+  
+
+
     // Función para renderizar la información meteorológica
     function renderWeatherInfo() {
         // Utiliza un bloque switch para manejar diferentes casos de temperatura
@@ -68,13 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
             case weatherInfo.app_temp > 10:
                 imagenPath = 'img/chill.jpeg';
                 break;
-            case weatherInfo.app_temp < 10:
+            case weatherInfo.app_temp < 5:
                 imagenPath = 'img/el_demon.jpeg';
                 break;
             default:
                 // Si la temperatura no coincide con ninguno de los casos, puedes establecer una imagen predeterminada o dejarla sin definir
                 //imagenPath = 'imagen-default.jpg';
         }
+
 
         
     obtenerDatosButton.addEventListener('click', function () {
@@ -96,10 +134,14 @@ document.addEventListener('DOMContentLoaded', function () {
           .catch(error => console.error('Error al obtener datos de la API:', error));
   });
 
+
+
+
         const htmlContent = `
             <h1>${weatherInfo.app_temp} °C</h1>
             <div class="contenedor">
                 <img src="${imagenPath}" alt="mood" width="200" height="150" class="imagen">
+                <p>Chiste: ${mensaje} </p>
             </div>
             <div class="container">
                 <div class="box">  
