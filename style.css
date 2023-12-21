@@ -18,12 +18,12 @@ h1 {
     justify-content: space-around; /* Distribuye el espacio alrededor de los elementos secundarios, proporcionando un espacio uniforme */
     align-items: flex-start; /* Alinea los elementos secundarios al inicio del eje transversal (superior) */
     width: 100%; /* Ocupa el 100% del ancho del contenedor padre */
-    padding-top: 20%; /* Agrega un espacio en la parte superior equivalente al 30% de la altura del contenedor */
+    padding-top: 0%; /* Agrega un espacio en la parte superior equivalente al 30% de la altura del contenedor */
     cursor: crosshair; /* Establece el cursor al estilo de la cruz */
 
 }
 .box {
-    min-width: 200px; /* Establece un ancho mínimo para evitar que sean demasiado pequeños */
+    min-width: 20px; /* Establece un ancho mínimo para evitar que sean demasiado pequeños */
     width: 49%; /* Establece el ancho de cada cuadro al 45% del ancho del contenedor principal */
     height: 250px; /* Modifica la altura del cuadro a tu preferencia, por ejemplo, 150px */ 
     margin: 5px 2px; /* Modifica el valor del margen horizontal según tu preferencia, por ejemplo, 5px en la parte superior e inferior y 10px en la derecha e izquierda */
@@ -72,8 +72,7 @@ footer {
 /*imagen*/
 .contenedor {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 .imagen {
     display: block;margin: 0 auto;
@@ -108,3 +107,17 @@ footer {
     transform: scale(0.97);
     box-shadow: 10px 10px 10px #ffffff;
    }
+   @media (max-width: 768px) {
+    /* Agrega tus estilos específicos para dispositivos móviles aquí */
+    h1 {
+      font-size: 30px; /* Ejemplo de ajuste de tamaño de fuente para dispositivos móviles */
+      padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
+    }
+    .container {
+      padding-top: 5%; /* Ejemplo de ajuste de estilo para dispositivos móviles */
+    }
+    .box, .box2 {
+      width: 100%; /* Ejemplo de ajuste de ancho para dispositivos móviles */
+    }
+  }
+  
