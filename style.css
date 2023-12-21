@@ -72,6 +72,8 @@ footer {
 /*imagen*/
 .contenedor {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .imagen {
     display: block;margin: 0 auto;
@@ -89,13 +91,13 @@ footer {
     padding-right: 33px;
     padding-bottom: 16px;
     padding-top: 16px;
-    border-radius: 9px;
+    border-radius: 19px;
     background-color: rgba(87, 86, 86, 0.186);
     border: none;
     font-family: inherit;
     text-align: center;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.9s;
    }
    
    #change-temperature-button:hover {
