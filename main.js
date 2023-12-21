@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const weatherInfo = weatherData.data[0];
     const weatherInfoContainer = document.getElementById('weather-info');
     const changeTemperatureButton = document.getElementById('change-temperature-button');
+    const obtenerDatosButton = document.getElementById('obtener-datos-button');
 
     // Agrega un event listener al botón para cambiar la temperatura
     changeTemperatureButton.addEventListener('click', function () {
@@ -74,6 +75,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Si la temperatura no coincide con ninguno de los casos, puedes establecer una imagen predeterminada o dejarla sin definir
                 //imagenPath = 'imagen-default.jpg';
         }
+
+        
+    obtenerDatosButton.addEventListener('click', function () {
+      // Hacer la solicitud a la API de Weatherbit al pulsar el botón
+      fetch('https://api.weatherbit.io/v2.0/current?key=0e96e32d5d784ce4b380bcb5c66481b2&city=Madrid&lang=es')
+          .then(response => response.json())
+          .then(data => {
+              // Actualizar los datos de weatherInfo con los datos de la API
+              if (data && data.data && data.data.length > 0) {
+                  const apiWeatherInfo = data.data[0];
+                  weatherInfo.app_temp = apiWeatherInfo.app_temp;
+                  weatherInfo.aqi = apiWeatherInfo.aqi;
+                  // Actualizar otros campos según sea necesario
+              }
+
+              // Volver a renderizar la información
+              renderWeatherInfo();
+          })
+          .catch(error => console.error('Error al obtener datos de la API:', error));
+  });
 
         const htmlContent = `
             <h1>${weatherInfo.app_temp} °C</h1>
