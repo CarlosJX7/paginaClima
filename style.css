@@ -107,6 +107,8 @@ footer {
     transform: scale(0.97);
     box-shadow: 10px 10px 10px #ffffff;
    }
+
+   /*pal movil*/
    @media (max-width: 768px) {
     /* Agrega tus estilos específicos para dispositivos móviles aquí */
     h1 {
