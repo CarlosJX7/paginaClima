@@ -82,7 +82,7 @@ footer {
 /*Boton */
 .botton {
     text-align: center;
-    margin-top: 20px; /* Agrega espacio entre box2 y el footer */
+    margin-top: 20px; /* Agrega espacio entre el boton y los contenedores de arriba */
     margin-bottom: 20px; /* Agrega espacio en la parte inferior de la página */
 }
 #change-temperature-button {
