@@ -152,6 +152,7 @@ async function obtenerChiste() {
                 </div>
                 <div class="box">
                     <p>Nubes: ${weatherInfo.clouds}</p>
+                    <img src="/img/nube.png" alt="mood" width="200" height="150" class="nube">
                 </div>
                 <div class="box2">  
                     <p> Otros campos </p>
