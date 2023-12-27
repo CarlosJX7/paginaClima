@@ -71,7 +71,8 @@ footer {
     margin: 10px;
 }
 .imagen {
-    display: block;margin: 0 auto;
+    display: block;
+    margin: 0 auto;
     border-radius: 8px;
 }
 
