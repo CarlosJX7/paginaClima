@@ -134,7 +134,8 @@ async function obtenerChiste() {
           .catch(error => console.error('Error al obtener datos de la API:', error));
   });
 
-
+let a;
+a = 'img/resolver.jpg'
 
 
         const htmlContent = `
@@ -144,9 +145,11 @@ async function obtenerChiste() {
                 <p>Chiste: ${mensaje} </p>
             </div>
             <div class="container">
-                <div class="box">  
+                <div class="box">
                     <p>Índice de Calidad del Aire: ${weatherInfo.aqi}</p>
-                </div>
+                
+                        <img src="${a}" with="200" height="150">
+                    </div>
                 <div class="box2">
                     <p>Ciudad: ${weatherInfo.city_name}</p>
                 </div>
